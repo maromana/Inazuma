@@ -1,0 +1,336 @@
+ /* El codigo css tiene estilos en desorden, pero todos se usan en algún momento */ 
+/* Tiene varios codigos para los diferentes casos que se presentaron */ 
+
+#btn-menu{
+    display: none;
+}
+
+.menu-img{
+    display: none;
+}
+
+body {
+    background-image: url('Imagenes/Fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+/* Etiquetas de la pagina index */ 
+.titulo {
+    color: white;
+    font-family: url('Fuentes/ja-jp.ttf');
+    font-size: 200px;
+    text-align: center;
+    text-shadow: 5px 5px #1C0C5B;
+    filter: brightness(1.25);
+}
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -12%;
+    margin-top: 4.5%
+}
+
+button{
+    color: #1C0C5B;
+    transition-duration: 0.4s;
+    font-size: 24px;
+    padding: 12px 28px;
+    border-radius: 8px;
+}
+button:hover {
+    color: white;
+    background-color: #3D2C8D;
+    cursor: -webkit-grab; cursor: grab;
+}
+
+.menu{
+    text-align: center;
+    margin-top: -10%;
+}
+.menu2{
+    text-align: center;
+    margin-top: -4%;
+}
+
+ /* Etiquetas generales en las subpaginas */ 
+.cajap{
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: -1.5%;
+    overflow: hidden
+}
+.titulo2{
+    color: #3D2C8D;
+    font-family: url('Fuentes/ja-jp.ttf');
+    font-size: 90px;
+    text-align: center;
+    text-shadow: 2px 2px #1C0C5B;
+}
+
+ /* Para evitar que se subraye el inazuma en cada pagina */ 
+a:link {
+    text-decoration: none;
+  }
+ /* Etiquetas para las subpaginas */ 
+.subtitulo{
+    margin-top: 3%;
+    color: #3D2C8D;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 1px 1px #1C0C5B;
+}
+.derecha{
+    float:right;
+    margin-right: 2%;
+}
+ /* Hay dos parrafos porque unos tienen más alineación al centro, y otro a la izquierda */ 
+.parrafo{
+    margin-left: 25%;
+    margin-right: 26%;
+    margin-top: 8%;
+}
+.parrafo2{
+    margin-left: 10%;
+    margin-right: 65%;
+    margin-top: 0%;
+}
+
+.izquierda{
+    float:left;
+    margin-left: 2%;
+}
+ /* Etiquetas para los tamaños de la mayoría de las imagenes */ 
+.chiquis{
+    width: 23%;
+    height: auto;
+}
+.chiquis2{
+    width: 23%;
+    height: auto;
+}
+
+.peques{
+    width: 40%;
+    height: auto;
+}
+.media{
+    width: 70%;
+    height: auto;
+}
+
+.centro{
+    margin-left: 40%;
+}
+.centro3{
+    margin-left: 40%;
+}
+.centro2{
+    margin-left: 17%;
+}
+
+ /* Etiqueta historia, para parrafos que estaban en la pagina historia */ 
+  /* Tambien se uso en otros casos */ 
+.historia{
+    margin-left:8%;
+    margin-right: 8%;
+    text-align: center;
+}
+.imgcenter{
+    float: center;
+}
+ /* Etiquetas para la galeria de imagenes */ 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  .column {
+    flex: 50%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+ /* Adaptación a diferentes pantallas */ 
+  /* Telefono celular pantallas de 480px a 800px */ 
+  @media screen and (max-width: 480px){
+    #btn-menu {
+        display: none;   /* oculta el checkbox cuando no es necesario*/
+    } 
+    .menu-img{
+        display: block;
+        margin-bottom: 5%;
+    }
+    #btn-menu:checked ~ .menu2 {  /* el checkbox controla las dos posiciones del menu */
+        margin-left: 5%; 
+        margin-right: 5%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        text-align: center;
+        background: #c2b3ff;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .menu2 {
+        width: 90%; /* se refiere al ancho del fondo del menu y no a los botones */
+        margin-left: -90%; /* se oculta porque se coloca por fuera de la ventana*/
+        margin-top: -85%;
+    } 
+    
+    .derecha{
+        float: none;
+        margin-right: 30%;
+        margin-left: 20%;
+    }
+    .parrafo2{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        text-align: center;
+    }
+    .titulo2{
+        color: #3D2C8D;
+        font-family: url('Fuentes/ja-jp.ttf');
+        font-size: 350%;
+        text-align: center;
+        text-shadow: 2px 2px #1C0C5B;
+    }
+    .chiquis{
+        width: 40%;
+        height: auto;
+        margin-left: 30%;
+        margin-right: 20%;
+
+    }
+    .muevase{
+        margin-left: 30%;
+        margin-right: 20%;
+        width: 40%;
+    }
+    .chiquis2{
+        width: 23%;
+        height: auto;
+    }
+    .centro3{
+        margin-left: 7%;
+    }
+    .imgcenter{
+        float: center;
+        width:100%;
+        height: auto;
+    }
+    .tableau{
+        width:100% !important;
+        height: auto !important;
+    }
+    .logo {
+        display: default;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: -12%;
+        margin-top: 4.5%;
+        width: 100%;
+        height:auto;
+    }
+    .titulo {
+        color: white;
+        font-family: url('Fuentes/ja-jp.ttf');
+        text-align: center;
+        text-shadow: 5px 5px #1C0C5B;
+        font-size: 350%;
+        filter: brightness(1.25);
+        margin-top: 45%;
+        margin-bottom: 25%;
+    }
+
+    .menu{
+        text-align: center;
+        margin-top: -4%;
+    }
+
+    .boton{
+        display: list-item;
+    }
+
+    .boton2{
+        display: block;
+    }
+  }
+  /*Tamaño para Tabletas*/
+  @media screen and (min-width: 481px) and (max-width: 800px) {
+    .menu-img{
+        display: none;
+    }
+    #btn-menu {
+        display: none;   /* oculta el checkbox cuando no es necesario*/
+    } 
+    .derecha{
+        float: none;
+        margin-right: 30%;
+        margin-left: 20%;
+    }
+    .parrafo2{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        text-align: center;
+    }
+    .titulo2{
+        color: #3D2C8D;
+        font-family: url('Fuentes/ja-jp.ttf');
+        font-size: 350%;
+        text-align: center;
+        text-shadow: 2px 2px #1C0C5B;
+    }
+    .chiquis{
+        width: 40%;
+        height: auto;
+        margin-left: 30%;
+        margin-right: 20%;
+    }
+    .chiquis2{
+        width: 23%;
+        height: auto;
+    }
+    .muevase{
+        margin-left: 30%;
+        margin-right: 20%;
+    }
+    .centro3{
+        margin-left: 30%;
+    }
+    .imgcenter{
+        float: center;
+        width:100%;
+        height: auto;
+    }
+    .logo {
+        display: default;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: -12%;
+        margin-top: 4.5%;
+        width: 90%;
+        height:auto;
+    }
+    .titulo {
+        color: white;
+        font-family: url('Fuentes/ja-jp.ttf');
+        font-size: 700%;
+        text-align: center;
+        text-shadow: 5px 5px #1C0C5B;
+        filter: brightness(1.25);
+        margin-top: 35%;
+        margin-bottom: 25%;
+    }
+    .menu2{
+        text-align: center;
+        margin-top: -4%;
+    }
+  }
